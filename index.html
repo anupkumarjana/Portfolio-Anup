@@ -7,6 +7,7 @@
     <title>Anup Kumar Jana Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0d84e582cd.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <div id="header">
@@ -197,6 +198,24 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
+    // <script>
+        // Get the menu items
+        var menuItems = document.querySelectorAll('nav ul li a');
+
+        // Add click event listener to each menu item
+        menuItems.forEach(function (menuItem) {
+            menuItem.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent default link behavior
+
+                var targetSectionId = this.getAttribute('href'); // Get the target section ID
+
+                // Scroll smoothly to the target section
+                document.querySelector(targetSectionId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    
 </script>
 
 </body>
