@@ -7,7 +7,7 @@
     <title>Anup Kumar Jana Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0d84e582cd.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="script1.js"></script>
 </head>
 <body>
     <div id="header">
@@ -16,11 +16,11 @@
                 <img src="images/logo1.png" class="logo"> 
 
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <!-- <li><a href="#">Services</a></li> -->
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#Portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <i class="fa-solid fa-xmark"></i>
                 </ul>
                 <i class="fa-solid fa-bars"></i>
@@ -201,6 +201,27 @@
     }
 
 </script>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Get the menu items
+    var menuItems = document.querySelectorAll('nav ul li a');
+  
+    // Add click event listener to each menu item
+    menuItems.forEach(function(menuItem) {
+      menuItem.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+  
+        var targetSectionId = this.getAttribute('href'); // Get the target section ID
+        var targetSection = document.querySelector(targetSectionId); // Get the target section element
+  
+        // Scroll smoothly to the target section
+        targetSection.scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+  
+</script>
 </body>
 </html>
