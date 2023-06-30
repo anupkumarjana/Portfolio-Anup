@@ -345,6 +345,12 @@ form btn2{
     margin-top: 20px;
     cursor: pointer;
 }
+.btn2 {
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+  }
+  
 .copyright{
     width: 100%;
     text-align: center;

@@ -227,15 +227,20 @@
   
 </script>
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzCgDX_Xqr9SXazn-caU1Lf1M7pDXNrAeKtslnkJypUOTUKSKIAaMUfZSSHdgRD6GJ_/exec'
-    const form = document.forms['submit-to-google-sheet']
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzCgDX_Xqr9SXazn-caU1Lf1M7pDXNrAeKtslnkJypUOTUKSKIAaMUfZSSHdgRD6GJ_/exec';
+    const form = document.forms['submit-to-google-sheet'];
   
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message))
-    })
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          console.log('Success!', response);
+          form.reset(); // Reset the form fields
+          alert("We'll get back to you soon."); // Show a "sent" message
+        })
+        .catch(error => console.error('Error!', error.message));
+    });
   </script>
+  
 </body>
 </html>
