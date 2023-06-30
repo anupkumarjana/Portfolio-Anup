@@ -446,8 +446,10 @@ nav .fa-solid {
       }
       .header-text p{
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-family:Georgia, 'Times New Roman', Times, serif;
         font-size: 30px;
-        font-family: monospace;
+        
+
       }
       
       /* Media Query for Small Screens */
