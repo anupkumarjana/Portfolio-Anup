@@ -73,7 +73,7 @@ nav ul li a:hover::after{
 
 }
 .text1{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:unset;
 }
 .header-text{
     margin-top: 10%;
