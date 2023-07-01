@@ -54,7 +54,7 @@ nav ul li a{
     text-decoration: None;
     font-size: 18px;
     position: relative;
-    font-family:cursive;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     
 }
@@ -73,7 +73,7 @@ nav ul li a:hover::after{
 
 }
 .text1{
-    font-family:cursive;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .header-text{
     margin-top: 10%;
@@ -86,7 +86,7 @@ nav ul li a:hover::after{
 }
 .header-text h1 span{
     
-    color:rgba(0, 0, 0, 0.5);
+    color:#000080;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .header-text p{
@@ -480,7 +480,7 @@ nav .fa-solid {
         font-size: 30px;        
       }
       .text1{
-        font-family:'Comic Sans MS', 'Arial', sans-serif;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       }
       
       
