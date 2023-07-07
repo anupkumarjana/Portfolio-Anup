@@ -16,23 +16,21 @@
 </head>
 <body>
     <div id="header">
-            <nav class="navbar">
+        <div class="container">
+            <nav>
                 <img src="images/logo1.png" class="logo">
-                <!-- <input type="checkbox" id="click">
-                <label for="click" class="menu-btn">
-                    <i class="fas fa-bars"></i>
-                </label> -->
                 <a href="https://coderahub.in/" class="box-link" target=" ">Codera Hub</a>
-                <ul class="navbartext">   
+                <ul id="sidemenu">   
                     <li><a href="#header" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <!-- <li><a href="#">Services</a></li> -->
-                    <li><a href="#Portfolio">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li> 
+                    <i class="fas fa-times" onclick="closemenu()" ></i>
                 </ul>
-
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
-        <div class="container-heading">
+        
             <div class="header-text">
                 <p><span class="text1"></span></p>
                 <h1>Hi, I'm <span> Anup</span><br> Kumar Jana from India.</h1>
@@ -97,41 +95,35 @@
     </div>
 
     <!------------------Services--------------------------------->
-<!-- <div id="Services">
+<div id="services">
     <div class="container">
         <h1 class="sub-title">My Services</h1>
         <div class="Services-list">
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Software Development</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Impedit dolores libero tenetur ipsam. Nisi ut distinctio dolore,velit,natusalias id 
-                 ccusantium adipisci minus cupiditate corporis! Dolore architecto tenetur quam.</p>
+                <p>Mastering the art of software development, I have honed my skills in designing, implementing, and maintaining robust and scalable solutions that empower businesses to thrive in the digital era.</p>
                  <a href="#">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Python Development</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Impedit dolores libero tenetur ipsam. Nisi ut distinctio dolore,velit,natusalias id 
-                 ccusantium adipisci minus cupiditate corporis! Dolore architecto tenetur quam.</p>
+                <p>As a Python enthusiast, I have leveraged the language's simplicity and versatility to craft elegant and efficient code, enabling the creation of innovative applications and solving complex problems with ease.</p>
                  <a href="#">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Fullstack Development</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Impedit dolores libero tenetur ipsam. Nisi ut distinctio dolore,velit,natusalias id 
-                 ccusantium adipisci minus cupiditate corporis! Dolore architecto tenetur quam.</p>
+                <p>With a holistic approach to web development, I possess the ability to seamlessly blend the power of front-end technologies with the functionality of back-end frameworks, creating immersive user experiences and delivering end-to-end solutions.</p>
                  <a href="#">Learn more</a>
             </div>
         </div>
     </div>
 
-</div> -->
+</div>
 
 <!--------------------Portfolio----------------------->
-<div id="Portfolio">
+<div id="projects">
     <div class="container">
         <h1 class="sub-title">My Projects</h1>
         <div class="work-list">
@@ -252,6 +244,15 @@
         })
         .catch(error => console.error('Error!', error.message));
     });
+  </script>
+  <script>
+    var sidemeu= document.getElementById("sidemenu");
+    function openmenu(){
+        sidemeu.style.right='0'
+    }
+    function closemenu(){
+        sidemeu.style.right='-200px'
+    }
   </script>
   
 </body>
