@@ -16,23 +16,22 @@
 </head>
 <body>
     <div id="header">
-            <nav class="navbar">
+        <div class="container">
+            <nav>
                 <img src="images/logo1.png" class="logo">
-                <!-- <input type="checkbox" id="click">
-                <label for="click" class="menu-btn">
-                    <i class="fas fa-bars"></i>
-                </label> -->
                 <a href="https://coderahub.in/" class="box-link" target=" ">Codera Hub</a>
-                <ul class="navbartext">   
+                <ul id="sidemenu">   
                     <li><a href="#header" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <!-- <li><a href="#">Services</a></li> -->
-                    <li><a href="#Portfolio">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li> 
+                    <i class="fas fa-times" onclick="closemenu()" ></i>
                 </ul>
-
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
-        <div class="container-heading">
+            <img src="images/background1.png" alt="avatar" class="right-image">
+            <div class="header-container">
             <div class="header-text">
                 <p><span class="text1"></span></p>
                 <h1>Hi, I'm <span> Anup</span><br> Kumar Jana from India.</h1>
@@ -43,40 +42,63 @@
                 <a href="https://www.hackerrank.com/HackCodeA?hr_r=1" target=" "><i class="fa-brands fa-hackerrank"></i></i></a>
             </div>
         </div>
+        </div>
     </div>
 <!---------------about----------------------->
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/user1.png">
+                    <img src="images/user3.png" class="about-image">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Passionate software developer with a strong foundation in building robust and scalable applications. Skilled in full-stack development, leveraging languages such as Python, Java, and JavaScript, and experienced in various frameworks and technologies. Committed to delivering high-quality code and creating innovative solutions to drive user satisfaction and business growth.</p>
+                    <p>Passionate software developer with a strong foundation in building robust and scalable applications. Skilled in full-stack development, leveraging languages such as Python, Java, JavaScript and experienced in various frameworks and technologies. Committed to delivering high-quality code and creating innovative solutions to drive user satisfaction and business growth.</p>
 
                     <div class="tab-titles">
                         <div class="tab-links active-link" onclick="opentab('Skills')">Skills</div>
                         <div class="tab-links" onclick="opentab('Experience')">Experience</div>
-                        <div class="tab-links" onclick="opentab('Education')">Eduction</div>
+                        <div class="tab-links" onclick="opentab('Education')">Education</div>
                     </div>
                     <div class="tab-contents active-tab" id="Skills" >
-                        <ul>
-                            <li><span>Software Developer</span><br>Fullstack Developer</li>
-                            <li><span>Technologies</span><br> 
-                                <li>Python</li>
-                                <li>Django</li>
-                                <li>JavaScript</li>
-                                <li>React.Js</li>
-                                <li>MySQL</li>
-                                <li>Java</li>
+                        <ul class="skills-list">
+                            <!-- <li><span>Software Developer</span><br>Fullstack Developer</li> -->
+                            <li><span>Languages</span><br>
+                            <ul class="technology-list"> 
+                                <li class="technology">Python</li>
+                                <li class="technology">JavaScript</li>
+                                <li class="technology">Java</li>
+                                <li class="technology">C</li>
+                            
+                            </ul>
                             </li>
-                            <li><span>Python Developer</span><br>Numpy, MatPlotLib, Pandas</li>
+                            <li><span>Technologies</span><br> 
+                            <ul class="technology-list"> 
+                                <li class="technology">React Js</li>
+                                <li class="technology">Node Js</li>
+                                <li class="technology">Django</li>
+                                <li class="technology">MySQL</li>
+                            </ul>
+                            </li>
+                            <li><span>Python Developer</span><br>
+                                <ul class="technology-list"> 
+                                <li class="technology">Numpy</li>
+                                <li class="technology">MatPlotLib</li> 
+                                <li class="technology">Pandas</li>
+                            </ul>
+                            </li>
+                            <li><span>Others</span><br>
+                                <ul class="technology-list"> 
+                                <li class="technology">Git</li>
+                                <li class="technology">Linux</li> 
+                            </ul>
+                            </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="Experience">
                         <ul>
-                            <li><span>Software Development Engineer</span><br>MountBlue Technologies</li>
+                            <li><span>Software Development Engineer</span></li>
+                            <a href="https://www.mountblue.io/"class="company" target=" ">MountBlue Technologies</a>
                             <p>I joined MountBlue Technologies in June,2023 as SDE. I've been working on Linux, Frontend Technologies and Backend as well.</p>
                             <!-- <li><span>Software Engineer</span><br>Python, C, Django, DSA</li>
                             <li><span>Python Developer</span><br>Numpy, MatPlotLib, Pandas</li> -->
@@ -97,41 +119,35 @@
     </div>
 
     <!------------------Services--------------------------------->
-<!-- <div id="Services">
+<div id="services">
     <div class="container">
         <h1 class="sub-title">My Services</h1>
         <div class="Services-list">
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Software Development</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Impedit dolores libero tenetur ipsam. Nisi ut distinctio dolore,velit,natusalias id 
-                 ccusantium adipisci minus cupiditate corporis! Dolore architecto tenetur quam.</p>
+                <p class="services-description">Mastering the art of software development, I have honed my skills in designing, implementing, and maintaining robust and scalable solutions that empower businesses to thrive in the digital era.</p>
                  <a href="#">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Python Development</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Impedit dolores libero tenetur ipsam. Nisi ut distinctio dolore,velit,natusalias id 
-                 ccusantium adipisci minus cupiditate corporis! Dolore architecto tenetur quam.</p>
+                <p class="services-description">As a Python enthusiast, I have leveraged the language's simplicity and versatility to craft elegant and efficient code, enabling the creation of innovative applications and solving complex problems with ease.</p>
                  <a href="#">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Fullstack Development</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Impedit dolores libero tenetur ipsam. Nisi ut distinctio dolore,velit,natusalias id 
-                 ccusantium adipisci minus cupiditate corporis! Dolore architecto tenetur quam.</p>
+                <p class="services-description"> class="project-description"With a holistic approach to web development, I possess the ability to seamlessly blend the power of front-end technologies with the functionality of back-end frameworks, creating immersive user experiences and delivering end-to-end solutions.</p>
                  <a href="#">Learn more</a>
             </div>
         </div>
     </div>
 
-</div> -->
+</div>
 
 <!--------------------Portfolio----------------------->
-<div id="Portfolio">
+<div id="projects">
     <div class="container">
         <h1 class="sub-title">My Projects</h1>
         <div class="work-list">
@@ -139,7 +155,7 @@
                 <img src="images/work-1 updated.png">
                 <div class="layer">
                     <h3>Jarvis AI</h3>
-                    <p>I build this Siri AI using python. It's basically do some virtual task according to the user</p>
+                    <p class="project-description">I build this Siri AI using python. It's basically do some virtual task according to the user</p>
                         <a href="https://github.com/CoderA78/Jarvis-AI" target=" "><i class="fa-solid fa-up-right-from-square"></i></i></i></i></a>
                 </div>
             </div>
@@ -148,7 +164,7 @@
                 <img src="images/work-2 updated.jpg">
                 <div class="layer">
                     <h3>Resturant Billing System</h3>
-                    <p>I've built this project using Python. This system will calculate all the prices and taxes
+                    <p class="project-description">I've built this project using Python. This system will calculate all the prices and taxes
                         ans also generate a random reciept no. and also have an calculator on the interface!
                     </p>
                         <a href="https://github.com/anupkumarjana/Restuarant-Billing-System" target=" "><i class="fa-solid fa-up-right-from-square" ></i></i></i></i></a>
@@ -158,7 +174,7 @@
                 <img src="images/work-3.png">
                 <div class="layer">
                     <h3>Shopping App</h3>
-                    <p>This app we'll help you to stay updated throughout the news.</p>
+                    <p class="project-description">This app we'll help you to stay updated throughout the news.</p>
                         <a href="#"><i class="fa-solid fa-up-right-from-square"></i></i></i></i></a>
                 </div>
             </div>
@@ -252,6 +268,15 @@
         })
         .catch(error => console.error('Error!', error.message));
     });
+  </script>
+  <script>
+    var sidemeu= document.getElementById("sidemenu");
+    function openmenu(){
+        sidemeu.style.right='0'
+    }
+    function closemenu(){
+        sidemeu.style.right='-200px'
+    }
   </script>
   
 </body>
